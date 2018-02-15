@@ -1,175 +1,174 @@
-/*GLOBAL STYLE*/
 * {
-	margin:0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-	font-family: Ampersand;
-	src: local('Baskerville'),
-		 local('Garamond');
-	unicode-range: U+26;
+  font-family: Ampersand;
+  src: local('Baskerville'), local('Garamond');
+  unicode-range: U+26;
 }
 
-/*BODY STYLE */
+
+/*==========================
+======== MAIN STYLE ========
+===========================*/
+
 body {
-	font-family: Ampersand, 'PT Sans', sans-serif;
-	background-color: #202C39;
+  font-family: Ampersand, 'PT Sans', sans-serif;
+  background-color: #202C39;
 }
 
 body > h1 {
-	margin:.5em;
-	text-transform: uppercase;
-
-	color:white;
+  padding: .5em 0;
+  color: white;
+  margin-left: 1em;
 }
 
-body > section {
-		display: grid;
-		grid-gap: .5em;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
-		width: 100vw;
-  		height: 100vh;
-  		grid-auto-flow: dense;
-  		
-  		color: #444;
-  		background-color: #202C39;
- }
-
-/*body main {
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
+nav {
+  display: grid;
+  grid-gap: .5em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  /*	width: 30vw;*/
+  height: 30vh;
 }
 
-body > main section {
-	border-radius: 4px;
-	width: 100%;
-	grid-column-start: 2;
-	grid-column-end: 2;
-	margin-top:3em;
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
 
-	background-color: white;
-}*/
+/* CHAT */
+nav a:nth-child(1) {
+  background-color: #324D5C;
+}
+/* LOG IN */
+nav a:nth-child(2) {
+  background-color: #46B39D;
+}
+/* MEDIA ITEM */
+nav a:nth-child(3) {
+  background-color: #61B1E1;
+}
+/* NAVIGATION */
+nav a:nth-child(4) {
+  background-color: #F53855;
+}
+/* TITLE WITH PICTURE */
+nav a:nth-child(5) {
+  background-color: #F0CA4D;
+}
+/* RATING */
+nav a:nth-child(6) {
+  background-color: #E37B40;
+}
+/* STEP INDICATOR */
+nav a:nth-child(7) {
+  background-color: #D2DA44;
+}
 
-/*NAVIGATION STYLE*/
-figure > h2 {
-	text-align: center;
-	filter: blur(.08em) opacity(.5);
+main > nav > a {
+  transition: all .3s;
+}
+
+main > nav > a:focus {
+  outline: none;
+  border: 4px solid deepskyblue;
+  transform: scale(1.06);
+}
+
+
+/*==========================
+====== POP UP WINDOW =======
+===========================*/
+
+section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
 
 section > a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  margin-left: .5em;
+}
+
+section:target {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+}
+
+section:target > a {
+	align-self:left;
 	text-decoration: none;
-	text-transform: uppercase;
-	
-	transition: all .3s;
-	
-
-	color:white;	
+	color:white;
+	padding:1em;
+	background-color:#F53855;
+	margin:0;
 }
 
-section > a:focus,
-section > a:hover {
-	z-index:300;
-	outline:none;
-	border: solid .2em;
-	transform: scale(1.06);	
+/*==========================
+===== LOG IN COMPONENT =====
+===========================*/
+
+article form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
-section > a:focus figure > h2,
-section > a:hover figure > h2 {
-	filter:none;
-}
-
-section > a:nth-child(1) {
-	background-color: cadetblue;
-	grid-column: auto / span 2;
-}
-
-section > a:nth-child(2) {
-	background-color: crimson;
-	grid-column: auto / span 1;
-}
-
-section > a:nth-child(3) {
-	background-color: deepskyblue;
-	grid-column: auto / span 2;
-}
-
-section > a:nth-child(4) {
-	background-color: goldenrod;
-	grid-column: auto / span 1;
-}
-
-section > a:nth-child(5) {
-	background-color: silver;
-}
-
-section > a:nth-child(6) {
-	background-color: navy;
-}
-
-section > a:nth-child(7) {
-	background-color: coral;
-}
-
-section > a:nth-child(8) {
-	background-color: gold;
-}
-
-body > main > section {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	padding: 1em;
-	transform: translate(-50%, -50%);
-/*	text-align: center;*/
-	
-	background: #655;
-	color: white;
-	
-}
-
-main section > form {
-	display: flex;
-	flex-direction: column;
-/*	align-items: center;
-	justify-content: center;*/
-}
-
-main section {
-	border-radius: 4px;
-}
-
-section > form label:nth-child(odd) {
-	text-transform: uppercase;
-	color: cadetblue;
-}
-
-body > main > figure {
-	max-width: 100%;
-	margin: 0;
-	padding: 10px;
-	border: 1px solid silver;
-}
-
-body > main > figure > img {
-	max-width: inherit;
+article form label {
+  margin-left: .5em;
 }
 
 
+/*==========================
+=== MEDIA ITEM COMPONENT ===
+===========================*/
+article:nth-child(2) {
+	width:40%;
+	background-color:white;
+}
 
+article:nth-child(2) h1 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
+article:nth-child(2) h1 a {
+  display: block;
+  margin-left: .5em;
+  padding: .5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: white;
+}
+/* changing the low ress. image to a high ress. one */
+[src*="boot"] {
+  content: url("https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-2500.jpg");
+  width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
+article:nth-child(2) + p {
+  text-align: center;
+  background-color: #F9F9F9;
+  margin-top: 0;
+  padding: .8em;
+  color: #333138;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 5px 6px -6px black;
+}
