@@ -1,17 +1,18 @@
 ## CSS to the Rescue
-Link to webpage: https://jajan20.github.io/cssttr/index.html
+Behold my awesome [WEBPAGE](https://jajan20.github.io/cssttr/index.html) !!
 
+## Week 1
 #### Progress
-##### Week 1
 
-- sketched different layouts for a design.
+
+- Sketched different layouts for a design.
 - Used CSS Secrets to add different styles
-	- Fancy ampersands (page 462)
-	- De-emphasize by dimming (page 546)
-	- De-emphasize by blurring (page 555)
-	- Intrinsic sizing (page 602)
-	- Styling by sibling count (page 616)
-	- Vertical Centering (page 641)
+	- [x] Fancy ampersands (page 462)
+	- [ ] De-emphasize by dimming (page 546)
+	- [x] De-emphasize by blurring (page 555)
+	- [x] Intrinsic sizing (page 602)
+	- [ ] Styling by sibling count (page 616)
+	- [x] Vertical Centering (page 641)
 
 While writing this I haven't used every style element mentioned above. Since I'm still changing my layout of the site. When I'll dive into styling my components I'm sure I can use the rest of the styling elements.
 
@@ -20,8 +21,58 @@ I started of great, It's been a while since I worked with css. But as the code p
 
 #### Next Week
 ###### To do
-- optimize the code
-- adding styling to the components
-- adding the "pleasureable"
-- Finish the assignment
+- [ ] optimize the code
+- [ ] adding styling to the components
+- [ ] adding the "pleasureable"
+- [ ] Finish the assignment
 
+
+## Week 2
+This week, while working on the different components I realised my mistake. Instead of putting every HTML component into a single file, I used hrefs to link to new webpages. You may wonder why this would be a problem, so let me explain. 
+
+Using pseudo classes I can select different sections based on the hierarchy inside my document. But since my components all had their own file it got harder and harder to find ways to select the same (but different) elements.
+
+#### Solution
+So I killed my darling, threw everything away and started from scratch. This time every component is nested comfortably inside one file. But as you can see this also cost me a lot of time. But I'm pretty sure I can fix everything before the due date. 
+
+#### Assignments
+- [ ] Loading spinner 8.43
+- [x] Transitions on hover/focus 8.42
+- [ ] Cursor 6.29
+- [ ] Extending clickable area 6.30
+- [ ] Custom checkboxes 6.31
+- [ ] PSEUDO random background 2.7
+- [ ] Form validation 
+
+
+
+#### What's next...
+- [ ] Styling every component
+- [ ] Fixing CSS
+- [ ] Adding pleasurable user experience
+
+## Sources
+#### Attribute selector
+[CSS Tricks](https://css-tricks.com/almanac/selectors/t/target/) for more info
+
+Something that really helped my was discovering that we can select elements on there attribute(value?)
+
+```css
+[src*="boot"] {
+  content: url("https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-2500.jpg");
+  width: 100%;
+}
+```
+Although it's not really neccesary in the example above it's still pretty cool. The img file didn't look really good. So I searched for the higher ressed one. And by using the attribute value selector I made css look for an img where the source link contains the word boot. Very specific and this makes sure I'm only changing that image.
+
+#### :target & visibility: visible;
+[CSS Tricks](https://css-tricks.com/almanac/selectors/a/attribute/) for more info
+
+Something else I thought was really cool. I wanted to make a pop up window where the component would be displayed without using javascript. 
+
+```css
+section:target {
+  visibility: visible;
+  }
+```
+With help of [James P.P. Jefferies](https://github.com/Jamerrone) I could use # in my hrefs refering to these sections (only used for linking, **not for styling**). The section would be hidden first and with :target I could make them visible again and style them.
