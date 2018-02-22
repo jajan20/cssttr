@@ -9,7 +9,7 @@
     <title>Living Styleguide</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
   </head>
 
@@ -32,6 +32,7 @@
     <section id="chat">
       <a href="#">Return</a>
       <article>
+        <h1>Chat Component</h1>
         <ol>
           <li>
             <p>Hey!</p>
@@ -60,7 +61,7 @@
           </li>
         </ol>
 
-        <form action="/" method="post">
+        <form action="#" method="post">
           <label for="field-message">Message</label>
           <textarea name="field-message" id="field-message"></textarea>
           <button type="submit">Send</button>
@@ -70,17 +71,24 @@
 
     <!-- LOG IN COMPONENT -->
     <section id="log-in">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
-        <form action="/" method="post">
+        <h1>Log in Component</h1>
+        <form action="#" method="post">
+          <span>
           <label for="field-email">Email</label>
           <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
+      	</span>
 
+          <span>
           <label for="field-password">Password</label>
           <input type="password" id="field-password" name="field-password" required>
+      </span>
 
-          <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
-          <label for="field-stay-logged-in">Stay logged in</label>
+          <span>
+          	<input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+          	<label for="field-stay-logged-in">Stay logged in</label>
+          </span>
 
           <a href="/">Forgot password</a>
 
@@ -91,9 +99,9 @@
 
     <!-- MEDIA ITEM COMPONENT -->
     <section id="media-item">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
-        <h1><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h1>
+        <h1><a href="#">HTML5 accessibility, are block links hurting accessibility?</a></h1>
 
         <img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
 
@@ -104,22 +112,22 @@
 
     <!-- NAVIGATION COMPONENT -->
     <section id="navigation">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
         <nav>
           <h1>Main navigation</h1>
           <ul>
-            <li><a href="#main-content" aria-label="Home, current page">Home</a></li>
+            <li><a href="#" aria-label="Home, current page">Home</a></li>
             <li>
-              <a href="/products">Products</a>
+              <a href="#">Products</a>
               <ul>
-                <li><a href="/products/rock">Rock</a></li>
-                <li><a href="/products/paper">Paper</a></li>
-                <li><a href="/products/scissors">Scissors</a></li>
+                <li><a href="#">Rock</a></li>
+                <li><a href="#">Paper</a></li>
+                <li><a href="#">Scissors</a></li>
               </ul>
             </li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
       </article>
@@ -127,15 +135,15 @@
 
     <!-- PICTURE WITH TITLE COMPONENT -->
     <section id="title-picture">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
         <h1>This picture has a title</h1>
         <figure>
           <!-- Portrait -->
-          <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+<!--           <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" /> -->
 
           <!-- Landscape -->
-          <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+          <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
           <figcaption>
             <p>
               There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
@@ -150,7 +158,7 @@
 
     <!-- RATING COMPONENT -->
     <section id="rating">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
 
         <fieldset>
@@ -220,7 +228,7 @@
 
     <!-- STEP INDICATOR COMPONENT -->
     <section id="step-indicator">
-      <a href="#">Close</a>
+      <a href="#">Return</a>
       <article>
         <nav>
           <h1>Finish your order</h1>
@@ -230,11 +238,16 @@
               <a href="/cart">Cart</a>
             </li>
             <li>
-              <a href="#main-content" aria-label="Address, current step">Address</a>
+              <a href="#" aria-label="Address, current step">Address</a>
             </li>
             <li>Payment</li>
             <li>Confirm</li>
           </ol>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </nav>
       </article>
     </section>
