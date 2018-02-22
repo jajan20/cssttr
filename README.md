@@ -1,6 +1,6 @@
 ## CSS to the Rescue
 Link to  [Website](https://jajan20.github.io/cssttr/index.html)
-![](/Users/jamie/Dropbox/HVA/Minor/cssToTheRescue/previewStyleguide.png)
+![](https://github.com/jajan20/cssttr/blob/master/previewStyleguide.png)
 ## Week 1
 #### Progress
 
