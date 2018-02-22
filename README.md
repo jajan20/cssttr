@@ -92,54 +92,42 @@ At the end of week two I made a to do for the upcomming week. It wasn't easy but
 ### List of things I learned
 ##### Pseudo classes
 
-- ```
-:target
-```
+- :target
 
-- ```
-:nth-of-type
-```
 
-- ```
-:focus-within
-```
+- :nth-of-type
 
-- ```
-:first-letter
-```
 
-- ```
-:checked
-```
+- :focus-within
 
-- ```
-:after
-```
 
-- ```
-:valid
-```
+- :first-letter
+
+
+- :checked
+
+
+- :after
+
+
+- :valid
+
 
 ##### Properties
-- ```
-outline-color:
-```
+- outline-color:
 
-- ```
-transition:
-```
 
-- ```
-content:
-```
+- transition:
 
-- ```
-align-self:
-```
 
-- ```
-visibility:
-```
+- content:
+
+
+- align-self:
+
+
+- visibility:
+
 
 The list above contains the attributes/classes that supprised me the most. I had heard of them before, just never used them. For future projects these will come in handy.
 
