@@ -1,6 +1,6 @@
 ## CSS to the Rescue
 Link to  [Website](https://jajan20.github.io/cssttr/index.html)
-![](https://github.com/jajan20/cssttr/blob/master/previewStyleguide.png)
+![](https://raw.githubusercontent.com/jajan20/cssttr/master/preview.png)
 
 ## Table of Contents
 - [Feedback](#feedback)
